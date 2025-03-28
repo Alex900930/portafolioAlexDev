@@ -1,26 +1,107 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Configuración base de colores */
+  --color-background: 220 20% 10%;
+  --color-foreground: 210 40% 98%;
+  --color-card: 220 25% 12%;
+  --color-card-foreground: 210 40% 98%;
+  --color-popover: 220 25% 12%;
+  --color-popover-foreground: 210 40% 98%;
+  --color-primary: 195 80% 65%;
+  --color-primary-foreground: 220 20% 10%;
+  --color-secondary: 220 25% 16%;
+  --color-secondary-foreground: 210 40% 98%;
+  --color-muted: 220 25% 16%;
+  --color-muted-foreground: 210 40% 70%;
+  --color-accent: 45 80% 60%;
+  --color-accent-foreground: 220 20% 10%;
+  --color-destructive: 0 84.2% 60.2%;
+  --color-destructive-foreground: 210 40% 98%;
+  --color-border: 220 25% 16%;
+  --color-input: 220 25% 16%;
+  --color-ring: 195 80% 65%;
+  --color-radius: 0.5rem;
+
+  /* Tipografía */
+  --font-sans: "Outfit", sans-serif;
+  --font-mono: "Montserrat", monospace;
+  --font-playfair: "Playfair Display", serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    color-scheme: dark;
+    @apply bg-background text-foreground;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  /* Mejoras tipográficas */
+  h1, h2 {
+    @apply tracking-tight;
+  }
+  
+  p {
+    @apply leading-relaxed;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  /* Componentes personalizados */
+  .progress-indicator {
+    @apply bg-gradient-to-r from-primary to-primary/70;
+  }
+
+  /* Gradientes */
+  .gold-gradient {
+    @apply bg-gradient-to-r from-accent to-accent/80;
+  }
+
+  .blue-gradient {
+    @apply bg-gradient-to-r from-primary to-primary/70;
+  }
+
+  /* Tipografía */
+  .heading-xl {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold;
+    font-family: var(--font-playfair);
+  }
+
+  .heading-lg {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold;
+    font-family: var(--font-playfair);
+  }
+
+  .heading-md {
+    @apply text-2xl md:text-3xl font-bold;
+    font-family: var(--font-playfair);
+  }
+
+  .heading-sm {
+    @apply text-xl font-bold;
+    font-family: var(--font-playfair);
+  }
+
+  .body-lg {
+    @apply text-lg;
+    font-family: var(--font-sans);
+  }
+
+  .body-md {
+    @apply text-base;
+    font-family: var(--font-sans);
+  }
+
+  .body-sm {
+    @apply text-sm;
+    font-family: var(--font-sans);
+  }
+
+  .accent-text {
+    @apply font-medium;
+    font-family: var(--font-mono);
+  }
 }
