@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Outfit, Playfair_Display, Montserrat } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/navbar"
+import Header from "@/components/Header"
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <body className={`${outfit.variable} ${playfair.variable} ${montserrat.variable} font-sans`}>
        <Navbar />
+       <Header />
           {children}
       </body>
     </html>
