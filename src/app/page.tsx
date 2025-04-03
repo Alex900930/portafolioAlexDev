@@ -12,101 +12,148 @@ import AnimatedCounter from "@/components/animated-counter"
 import ServiceCard from "@/components/service-card"
 import Navbar from "@/components/navbar"
 import Image from "next/image"
+import Cover from "@/components/Cover"
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-[hsl(var(--color-background))] to-[hsl(var(--color-background)/40%)]">
-      <Navbar />
+    <div className="flex flex-col min-h-screen bg-primary">
+      <Cover />
+      
 
-     {/* Hero Section */}
-<section className="relative py-20 md:py-32 lg:py-40 overflow-hidden">
-  {/* Fondo con gradiente radial usando tus variables */}
-  <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--color-primary)/15%),transparent_40%),radial-gradient(circle_at_70%_60%,hsl(var(--color-primary)/10%),transparent_50%)]"></div>
+ {/* Hero Section - Versión mejorada */}
+{/* <section className="relative py-32 overflow-hidden min-h-[90vh] flex items-center">
+  {/* Fondo más dinámico */}
+ {/*  <div className="absolute inset-0 -z-10">
+    <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[hsl(var(--color-primary)/10%)] via-transparent to-transparent opacity-70"></div>
+    <div className="absolute top-0 left-0 w-full h-full bg-[url('/grid.svg')] opacity-[0.02]"></div>
+  </div> */}
+
+  {/* Partículas o elementos decorativos flotantes */}
+  {/* <div className="absolute inset-0 overflow-hidden">
+    {[...Array(10)].map((_, i) => (
+      <div 
+        key={i}
+        className="absolute rounded-full bg-[hsl(var(--color-primary)/10%)]"
+        style={{
+          width: `${Math.random() * 10 + 2}px`,
+          height: `${Math.random() * 10 + 2}px`,
+          top: `${Math.random() * 100}%`,
+          left: `${Math.random() * 100}%`,
+          animation: `float ${Math.random() * 10 + 10}s linear infinite`,
+          animationDelay: `${Math.random() * 5}s`
+        }}
+      />
+    ))}
+  </div> */}
+
+{/*   <div className="container mx-auto max-w-7xl px-6">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* Texto */}
+    {/*   <div className="relative"> */}
   
-  <div className="container mx-auto max-w-6xl px-4">
-    <div className="flex flex-col items-center text-center mb-12 relative">
-      {/* Badge */}
-      <Badge className="mb-6 px-4 py-1.5 text-sm font-medium border-none 
-                      bg-[hsl(var(--color-primary)/10%)] 
+     {/*    <div className="absolute -top-10 -left-10 w-40 h-40 bg-[hsl(var(--color-primary)/20%)] rounded-full filter blur-3xl opacity-30"></div> */}
+        
+     {/*    <Badge className="mb-6 px-4 py-2 text-xs font-medium tracking-wider uppercase border border-[hsl(var(--color-primary)/30%)] 
+                      bg-[hsl(var(--color-primary)/5%)] 
                       text-[hsl(var(--color-primary))]
-                      hover:bg-[hsl(var(--color-primary)/20%)]
-                      hover:border-[hsl(var(--color-primary)/30%)]
+                      hover:bg-[hsl(var(--color-primary)/10%)]
                       transition-all duration-300
-                      cursor-pointer"
-             style={{ fontFamily: "var(--font-mono)" }}>
-        Desarrollador Full Stack & Diseñador UI/UX
-      </Badge>
-
-      {/* Título principal */}
-      <h1 className="mb-6 text-5xl font-bold leading-[1.1] 
-                    md:text-6xl lg:text-7xl
-                    bg-gradient-to-r 
-                    from-[hsl(var(--color-primary))] 
-                    to-[hsl(var(--color-primary)/70%)]
-                    bg-clip-text text-transparent"
-          style={{ fontFamily: "var(--font-playfair)" }}>
-        Transformando Ideas en
-        <br />
-        Experiencias Digitales
-      </h1>
-
-      {/* Texto descriptivo */}
-      <p className="text-lg max-w-2xl mb-10 leading-relaxed"
-         style={{ 
-           fontFamily: "var(--font-sans)",
-           color: "hsl(var(--color-muted-foreground))"
-         }}>
-        Creo soluciones web que no solo se ven increíbles, sino que también generan resultados tangibles para tu negocio
-      </p>
-
-      {/* Botones */}
-      <div className="flex flex-col sm:flex-row gap-4">
-        <Button
-          size="lg"
-          className="gap-2 text-base px-8 py-6 
-                    bg-[hsl(var(--color-primary))] 
-                    hover:bg-[hsl(var(--color-primary)/90%)]
-                    shadow-lg shadow-[hsl(var(--color-primary)/20%)]
-                    hover:shadow-xl hover:shadow-[hsl(var(--color-primary)/30%)]
-                    transition-all duration-300 hover:-translate-y-1"
-          style={{ fontFamily: "var(--font-mono)" }}
-        >
-          Ver proyectos <MoveRight className="h-4 w-4" />
-        </Button>
-        <Button
-          size="lg"
-          variant="outline"
-          className="gap-2 text-base px-8 py-6 
-                    border-2 border-[hsl(var(--color-accent))] 
-                    text-[hsl(var(--color-accent))]
-                    hover:bg-[hsl(var(--color-accent))] bg-[hsl(var(--color-primary))]
-                    transition-all duration-300 hover:-translate-y-1"
-          style={{ fontFamily: "var(--font-mono)" }}
-        >
-          Contactar
-        </Button>
+                      cursor-pointer animate-fade-in"
+              style={{ fontFamily: "var(--font-mono)" }}>
+          Desarrollador Full Stack & Diseñador UI/UX
+        </Badge>
+        
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate-fade-in-up"
+            style={{ 
+              fontFamily: "var(--font-playfair)",
+              background: "linear-gradient(to right, hsl(var(--color-primary)), hsl(var(--color-primary)/70%))",
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+              color: "transparent"
+            }}>
+          <span className="block">Transformando</span>
+          <span className="block">Ideas en</span>
+          <span className="block">Realidad Digital</span>
+        </h1>
+        
+        <p className="text-xl text-[hsl(var(--color-muted-foreground))] max-w-xl mb-10 leading-relaxed animate-fade-in-up delay-100"
+            style={{ fontFamily: "var(--font-sans)" }}>
+          Creo experiencias digitales memorables que combinan diseño excepcional con tecnología de vanguardia para impulsar tu negocio.
+        </p>
+        
+        <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-200">
+          <Button
+            size="lg"
+            className="group relative overflow-hidden px-8 py-6 rounded-lg
+                      bg-gradient-to-r from-[hsl(var(--color-primary))] to-[hsl(var(--color-primary)/70%)]
+                      hover:from-[hsl(var(--color-primary)/90%)] hover:to-[hsl(var(--color-primary)/60%)]
+                      shadow-lg hover:shadow-xl transition-all duration-300"
+            style={{ fontFamily: "var(--font-mono)" }}
+          >
+            <span className="relative z-10 flex items-center gap-2">
+              Ver proyectos <MoveRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </span>
+            <span className="absolute inset-0 bg-[hsl(var(--color-primary))] opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="px-8 py-6 rounded-lg border-2 border-[hsl(var(--color-accent))] 
+                      text-[hsl(var(--color-accent))] hover:bg-[hsl(var(--color-accent))] 
+                      hover:text-mint-500 transition-all duration-300"
+            style={{ fontFamily: "var(--font-mono)" }}
+          >
+            Contactar ahora
+          </Button>
+        </div>
       </div>
+       */}
 
-      {/* Indicador de scroll */}
-      <div className="mt-16 flex flex-col items-center gap-2">
-        <p className="text-sm" style={{ 
+     {/*  <div className="relative flex justify-center items-center animate-fade-in delay-300">
+        <div className="relative w-full max-w-md aspect-square rounded-2xl overflow-hidden">
+      
+          <div className="absolute inset-0 border-2 border-[hsl(var(--color-primary)/30%)] rounded-2xl pointer-events-none"></div>
+          <div className="absolute inset-4 border border-[hsl(var(--color-primary)/10%)] rounded-xl pointer-events-none"></div>
+          
+      
+          <Image 
+            src='/curriculum.jpeg' 
+            alt='Alexander Herrera - Desarrollador Full Stack'
+            fill
+            className="object-cover scale-105"
+            priority
+          />
+          
+      
+          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--color-primary)/10%)] to-[hsl(var(--color-primary)/5%)] mix-blend-multiply"></div>
+          
+         
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--color-primary)/20%),transparent_70%)] opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+        
+     
+        <div className="absolute -bottom-10 -left-10 w-32 h-32 rounded-full bg-[hsl(var(--color-primary)/5%)] blur-xl"></div>
+        <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-[hsl(var(--color-accent)/5%)] blur-xl"></div>
+      </div> */}
+  {/*   </div> */}
+    
+    {/* Indicador de scroll */}
+    {/* <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="flex flex-col items-center">
+        <p className="text-sm mb-2" style={{ 
           color: "hsl(var(--color-muted-foreground))",
           fontFamily: "var(--font-mono)"
         }}>
-          Scroll para descubrir
+          Scroll para explorar
         </p>
-        <ArrowDown className="h-6 w-6 animate-bounce text-[hsl(var(--color-accent))]" />
+        <ArrowDown className="h-6 w-6 text-[hsl(var(--color-accent))]" />
       </div>
-    </div>
-  </div>
-
-  {/* Elementos flotantes */}
-  <div className="absolute top-1/4 left-10 w-24 h-24 rounded-full bg-[hsl(var(--color-primary)/5%)] blur-3xl"></div>
-  <div className="absolute bottom-1/4 right-10 w-32 h-32 rounded-full bg-[hsl(var(--color-accent)/5%)] blur-3xl"></div>
-</section>
+    </div> */}
+ {/*  </div> */}
+{/* </section> */}
 
      {/* Stats Section */}
-     <section className="py-16 relative">
+     {/* <section className="py-16 relative">
         <div className="container mx-auto max-w-6xl px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <StatCard
@@ -127,10 +174,10 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Services Section */}
-      <section id="servicios" className="py-24 relative">
+      {/* <section id="servicios" className="py-24 relative">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_70%_30%,rgba(120,200,255,0.1),transparent_25%)]"></div>
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-16">
@@ -174,10 +221,10 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* About Section */}
-      <section id="sobre-mi" className="py-24 relative">
+      {/* <section id="sobre-mi" className="py-24 relative">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_70%,rgba(120,200,255,0.1),transparent_25%)]"></div>
         <div className="container mx-auto max-w-6xl px-4">
           <div className="flex flex-col md:flex-row gap-16 items-center">
@@ -285,10 +332,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Skills Section */}
-      <section id="habilidades" className="py-24 relative">
+      {/* <section id="habilidades" className="py-24 relative">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_50%,rgba(120,200,255,0.1),transparent_40%)]"></div>
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-16">
@@ -324,10 +371,10 @@ export default function Home() {
             <SkillCard name="AWS" level={70} icon="/placeholder.svg?height=40&width=40" />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Process Section */}
-      <section id="proceso" className="py-24 relative">
+     {/*  <section id="proceso" className="py-24 relative">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_70%_70%,rgba(120,200,255,0.1),transparent_25%)]"></div>
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-16">
@@ -374,10 +421,10 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Projects Section */}
-      <section id="proyectos" className="py-24 relative">
+      {/* <section id="proyectos" className="py-24 relative">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_30%,rgba(120,200,255,0.1),transparent_25%)]"></div>
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-16">
@@ -443,10 +490,10 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials Section */}
-      <section id="testimonios" className="py-24 relative">
+   {/*    <section id="testimonios" className="py-24 relative">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_50%,rgba(120,200,255,0.1),transparent_40%)]"></div>
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-16">
@@ -485,10 +532,10 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
-      <section className="py-24 relative">
+      {/* <section className="py-24 relative">
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[hsl(var(--color-accent))]/10 to-[hsl(var(--color-primary))]/10"></div>
         <div className="container mx-auto max-w-6xl px-4">
           <div className="bg-gradient-to-br from-[hsl(var(--color-accent))]/80 to-[hsl(var(--color-accent))] rounded-3xl p-12 shadow-2xl shadow-[hsl(var(--color-accent))]/20 relative overflow-hidden">
@@ -516,10 +563,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
-      <section id="faq" className="py-24 relative">
+     {/*  <section id="faq" className="py-24 relative">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_30%,rgba(120,200,255,0.1),transparent_25%)]"></div>
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-16">
@@ -575,10 +622,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
-      <section id="contacto" className="py-24 relative">
+   {/*    <section id="contacto" className="py-24 relative">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_70%_70%,rgba(120,200,255,0.1),transparent_25%)]"></div>
         <div className="container mx-auto max-w-6xl px-4">
           <div className="flex flex-col md:flex-row gap-16">
@@ -665,10 +712,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
-      <footer className="py-12 border-t border-[hsl(var(--color-accent))]/10 px-4 bg-card/50">
+      {/* <footer className="py-12 border-t border-[hsl(var(--color-accent))]/10 px-4 bg-card/50">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             <div>
@@ -751,7 +798,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   )
 }

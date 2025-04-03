@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Outfit, Playfair_Display, Montserrat } from "next/font/google"
 import "./globals.css"
+import Navbar from "@/components/navbar"
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -34,9 +35,8 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body className={`${outfit.variable} ${playfair.variable} ${montserrat.variable} font-sans`}>
-        
+       <Navbar />
           {children}
-        
       </body>
     </html>
   )

@@ -8,13 +8,13 @@
   --color-card-foreground: 210 40% 98%;
   --color-popover: 220 25% 12%;
   --color-popover-foreground: 210 40% 98%;
-  --color-primary: 195 80% 65%;
+  /* --color-primary: 195 80% 65%; */
   --color-primary-foreground: 220 20% 10%;
-  --color-secondary: 220 25% 16%;
+  /* --color-secondary: 220 25% 16%; */
   --color-secondary-foreground: 210 40% 98%;
   --color-muted: 220 25% 16%;
   --color-muted-foreground: 210 40% 70%;
-  --color-accent: 45 80% 60%;
+  /* --color-accent: 45 80% 60%; */
   --color-accent-foreground: 220 20% 10%;
   --color-destructive: 0 84.2% 60.2%;
   --color-destructive-foreground: 210 40% 98%;
@@ -22,6 +22,12 @@
   --color-input: 220 25% 16%;
   --color-ring: 195 80% 65%;
   --color-radius: 0.5rem;
+  --color-mint-500: oklch(0.72 0.11 178);
+
+   /* Paleta 60-30-10 */
+   --color-primary: #2A2D3D;     /* Azul Marino (60%) */
+   --color-secondary: #F5F5F5;   /* Gris Claro (30%) */
+   --color-accent: #FFD700;      /* Dorado (10%) */
 
   /* Tipografía */
   --font-sans: "Outfit", sans-serif;
@@ -29,10 +35,63 @@
   --font-playfair: "Playfair Display", serif;
 }
 
+/* Animaciones */
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
 @layer base {
   :root {
-    color-scheme: dark;
-    @apply bg-background text-foreground;
+    --background: var(--color-primary);     /* Fondo principal */
+    --foreground: var(--color-secondary);   /* Textos sobre azul */
   }
 
   * {
