@@ -112,8 +112,8 @@ export const dataCounter = [
     },
     {
         id: 3,
-        endCounter: 30,
-        text: "Premios ganadores",
+        endCounter: 10,
+        text: "Certificaciones",
         lineRight: false,
         lineRightMobile: false,
     },

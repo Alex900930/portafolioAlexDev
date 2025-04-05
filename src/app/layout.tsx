@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body className={`${outfit.variable} ${playfair.variable} ${montserrat.variable} font-sans`}>
+      <body className={`${outfit.variable} ${playfair.variable} ${montserrat.variable} font-sans bg-primary`}>
        <Navbar />
        <Header />
           {children}

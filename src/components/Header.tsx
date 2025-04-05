@@ -6,7 +6,7 @@ import { socialNetworks } from '@/data'
 export default function Header() {
   return (
     <MotionTranstion position='bottom'
-    className='absolute z-40 inline-block w-full top-5 md:top-10'
+    className='absolute z-40 inline-block w-full top-5 md:top-10 px-20'
     >
         <header>
            <div className='container text-white justify-between max-w-full mx-auto md:flex'>
