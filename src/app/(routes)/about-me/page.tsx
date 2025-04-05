@@ -1,6 +1,7 @@
 import Avatar from '@/components/avatar'
 import ContainerPage from '@/components/container'
 import CounterServices from '@/components/counter-services'
+import TimeLine from '@/components/time-line'
 import TransitionPage from '@/components/transition.page'
 import React from 'react'
 
@@ -18,6 +19,7 @@ export default function Aboutme() {
            <span className='font-bold text-accent'>Trayectoria Profesional</span>
         </h1>
         <CounterServices />
+        <TimeLine />
       </ContainerPage>
     </>
   )
