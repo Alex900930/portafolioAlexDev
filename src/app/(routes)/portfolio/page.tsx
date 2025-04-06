@@ -13,7 +13,6 @@ const PortfolioPage = () => {
         <ContainerPage>
             <TransitionPage />
             <AvatarPortfolio />
-            <CircleImage />
             <div className="flex flex-col justify-center h-full">
                 <h1 className="text-2xl leading-tight text-center md:text-4xl md:mb-5 text-white">Mis últimos <span className="font-bold text-accent">trabajos realizados</span></h1>
 

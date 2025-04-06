@@ -21,13 +21,14 @@ const PortfolioBox = (props: PortfolioBoxProps) => {
             className="p-4 border border-teal-50 rounded-xl"
         >
             <h3 className="mb-4 text-xl text-white">{title}</h3>
-            <Image
+             <Image
                 src={image}
                 alt="Image"
                 width={200} height={200} className="w-full md:w-[200px] rounded-2xl h-auto"
             />
 
-            <div className="flex gap-5 mt-5">
+
+            <div className="flex gap-5 mt-5 text-white">
                 <Link
                     href={urlGithub}
                     target="_blank"
@@ -43,7 +44,7 @@ const PortfolioBox = (props: PortfolioBoxProps) => {
                 >
                     Live demo
                 </Link>
-            </div>
+            </div> 
         </div>
     );
 }
