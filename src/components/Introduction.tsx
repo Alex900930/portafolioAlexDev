@@ -26,7 +26,7 @@ export default function Introduction() {
       border-4 border-white/10 hover:border-transparent
       transition-all duration-500 shadow-lg hover:shadow-xl hover:shadow-accent/20'>
       <Image
-        src='/curriculum.jpeg'
+        src='/curriculum.jpg'
         fill
         alt='Foto Perfil'
         className='object-cover transition-transform duration-500 

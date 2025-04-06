@@ -13,10 +13,11 @@ export default function Aboutme() {
       <ContainerPage >
       <Avatar />
       <h1 className='text-white text-2xl leading-light
-        text-center md:text-left md:text-5xl md:mt-10
+        text-center py-5- md:text-left md:text-5xl md:mt-10 md:px-40
         '>
           Toda mi{' '}
            <span className='font-bold text-accent'>Trayectoria Profesional</span>
+        
         </h1>
         <CounterServices />
         <TimeLine />

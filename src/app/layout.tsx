@@ -1,7 +1,14 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Outfit, Playfair_Display, Montserrat } from "next/font/google"
+
+
 import "./globals.css"
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
 import Navbar from "@/components/navbar"
 import Header from "@/components/Header"
 

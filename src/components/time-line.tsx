@@ -6,7 +6,7 @@ export default function TimeLine() {
     <div className='flex flex-col justify-center divide-y 
     divide-slate-200'>
         
-       <div className='w-full max-w-3xl mx-auto md:pb-40 md:pt-20'>
+       <div className='w-full max-w-3xl mx-auto md:pb-40 md:pt-20 '>
          <div className='-my-6'>
             {dataAboutPage.map((data)=>(
                <div key={data.id}
@@ -34,7 +34,14 @@ export default function TimeLine() {
                      '>
                         {data.date}
                      </time>
+                     <p className='text-xl font-bold text-gray-400'>
+                        {data.subtitle}
+                     </p>
+                     
                   </div>
+                  <p className='text-slate-400 max-w-md'>
+                     {data.description}
+                     </p>
                </div>
             ))}
          </div>
