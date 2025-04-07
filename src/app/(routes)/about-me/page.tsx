@@ -15,8 +15,8 @@ export default function Aboutme() {
       <h1 className='text-white text-2xl leading-light
         text-center py-5- md:text-left md:text-5xl md:mt-10 md:px-40
         '>
-          Toda mi{' '}
-           <span className='font-bold text-accent'>Trayectoria Profesional</span>
+          Toda a minha{' '}
+           <span className='font-bold text-accent'>Jornada Profissional</span>
         
         </h1>
         <CounterServices />

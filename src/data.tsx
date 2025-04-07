@@ -1,26 +1,33 @@
 import { BookText, CodeSquare, HomeIcon, UserRound, Linkedin, Instagram, Github, Twitch, Facebook, Crop, Pencil, Computer, Book, Rocket, Speech } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export const socialNetworks = [
     {
         id: 1,
-        logo: <Facebook size={30} strokeWidth={1} />,
-        src: "#!",
+        logo: <FaWhatsapp className="text-3xl" />,
+        src: "https://wa.me/+5585989329627?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Podemos%20falar?",
     },
     {
         id: 2,
         logo: <Linkedin size={30} strokeWidth={1} />,
-        src: "#!",
+        src: "https://www.linkedin.com/in/alexander-herrera-millet-8127b81b9/",
     },
     {
         id: 3,
         logo: <Instagram size={30} strokeWidth={1} />,
-        src: "#!",
+        src: "https://www.instagram.com/alexdevbrasil/",
     },
     {
         id: 4,
         logo: <Github size={30} strokeWidth={1} />,
+        src: "https://github.com/Alex900930",
+    },
+    {
+        id: 5,
+        logo: <Facebook size={30} strokeWidth={1} />,
         src: "#!",
     },
+    
 ];
 
 
@@ -60,31 +67,31 @@ export const itemsNavbar = [
 export const dataAboutPage = [
     {
         id: 1,
-        title: "Frontend Developer",
-        subtitle: "TechSolutions",
-        description: "Colabora con un equipo dinámico para desarrollar interfaces de usuario atractivas y funcionales que impulsen el éxito de nuestros clientes en el mundo digital.",
-        date: "Nov 2023 ",
+        title: "FullStack Developer",
+        subtitle: "Digital Learning",
+        description: "Trabalhei de forma próxima com minha equipe no desenvolvimento de um projeto web do zero, assumindo responsabilidades chave que contribuíram para o sucesso do projeto.Criação da Interface do Projeto Web. Desenvolvimento de Funcionalidades de Registro. Criação do Backend. ",
+        date: "Oct 2023 ",
     },
     {
         id: 2,
         title: "Creador de Experiencias Digitales",
-        subtitle: "PixelCrafters",
-        description: "Trabaja en proyectos emocionantes que desafían los límites de la creatividad y la tecnología. Únete a nosotros mientras creamos experiencias digitales cautivadoras que inspiran y cautivan a nuestros usuarios.",
-        date: "May 2021",
+        subtitle: "JIT",
+        description: "fiz parte da equipe de desenvolvimento da aplicação Incluia, uma plataforma web onde desempenhei várias funções chave tanto no frontend quanto no backend. Desenvolvimento Backend com Express.js e Node.js.",
+        date: "Dec 2022",
     },
     {
         id: 3,
-        title: "Especialista en Desarrollo Frontend",
-        subtitle: "CodeForge Solutions",
-        description: "Como desarrollador frontend, tendrás la oportunidad de colaborar en proyectos diversos y desafiantes que te permitirán expandir tus habilidades y dejar tu huella en el mundo digital.",
-        date: "Ago 2019",
+        title: "Especialista em Desenvolvimento Front-end",
+        subtitle: "AllTech",
+        description: "Na Altech, transformei designs em experiências interativas com Angular 3, sempre pensando na usabilidade do usuário final. Apaixonado por resolver problemas com código elegante!",
+        date: "Jan 2020",
     },
     {
         id: 4,
-        title: "Prácticas Grado",
+        title: "Especialista em Desenvolvimento Front-end",
         subtitle: "WebWizards Inc.",
-        description: "Únete a nosotros mientras creamos sitios web y aplicaciones interactivas que sorprenden y deleitan a nuestros clientes. Si tienes pasión por el diseño y la programación, y disfrutas colaborar en un entorno creativo, ¡queremos conocerte!        ",
-        date: "Mar 2018",
+        description: "Na WebWizards, dei vida a interfaces funcionais e bonitas usando Symfony 2 e Twig, sempre focando na experiência perfeita entre tecnologia e usuário.",
+        date: "Sept 2014",
     },
 ]
 
@@ -92,28 +99,28 @@ export const dataCounter = [
     {
         id: 0,
         endCounter: 10,
-        text: "Años de experiencia",
+        text: "Anos de experiência",
         lineRight: true,
         lineRightMobile: true,
     },
     {
         id: 1,
         endCounter: 80,
-        text: "Clientes satisfechos",
+        text: "Clientes Satisfeitos",
         lineRight: true,
         lineRightMobile: false,
     },
     {
         id: 2,
         endCounter: 220,
-        text: "Proyectos finalizados",
+        text: "Projetos Concluídos",
         lineRight: true,
         lineRightMobile: true,
     },
     {
         id: 3,
         endCounter: 10,
-        text: "Certificaciones",
+        text: "Certificações",
         lineRight: false,
         lineRightMobile: false,
     },
@@ -183,42 +190,35 @@ export const dataTestimonials = [
         id: 1,
         name: "George Snow",
         description:
-            "¡Increíble plataforma! Los testimonios aquí son genuinos y me han ayudado a tomar decisiones informadas. ¡Altamente recomendado!",
+            "Trabalho incrível! Os projetos entregues foram além das minhas expectativas, com um design intuitivo e resultados reais. Recomendo demais!",
         imageUrl: "/profile1.png",
     },
     {
         id: 2,
-        name: "Juan Pérez",
+        name: "María García",
         description:
-            "Me encanta la variedad de testimonios disponibles en esta página. Es inspirador ver cómo otras personas han superado desafíos similares a los míos. ¡Gracias por esta invaluable fuente de motivación!",
+            "Profissionalismo que faz diferença! Cada detalhe foi pensado para alinhar estética e funcionalidade, gerando um impacto visível no meu negócio. Nota 10!",
         imageUrl: "/profile2.png",
     },
     {
         id: 3,
-        name: "María García",
+        name: "Juan Pérez",
         description:
-            "Excelente recurso para obtener opiniones auténticas sobre diferentes productos y servicios. Me ha ayudado mucho en mis compras en línea. ¡Bravo por este sitio!",
+            "Adorei o resultado! Criatividade + técnica = sites que convertem. Meu público elogiou a experiência, e as vendas aumentaram. Repetirei com certeza!",
         imageUrl: "/profile3.png",
     },
     {
         id: 4,
-        name: "Laura Snow",
+        name: "Carlos Sánchez",
         description:
-            "¡Qué descubrimiento tan fantástico! Los testimonios aquí son honestos y detallados. Me siento más seguro al tomar decisiones después de leer las experiencias compartidas por otros usuarios.",
+            "Recomendo de olhos fechados! Entregou exatamente o que prometeu: identidade visual única, prazo cumprido e um processo colaborativo. Perfeito para quem busca qualidade.",
         imageUrl: "/profile4.png",
     },
     {
         id: 5,
-        name: "Carlos Sánchez",
+        name: "Laura Snow",
         description:
-            "Una joya en la web. Los testimonios son fáciles de encontrar y están bien organizados. ¡Definitivamente mi destino número uno cuando necesito referencias confiables!",
+            "Sensacional! Transformou minha ideia em uma plataforma moderna e fácil de usar, com um atendimento impecável. Melhor investimento que fiz!",
         imageUrl: "/profile5.png",
-    },
-    {
-        id: 6,
-        name: "Antonio Martínez",
-        description:
-            "¡Fantástico recurso para aquellos que buscan validación antes de tomar decisiones importantes! Los testimonios aquí son veraces y realmente útiles. ¡Gracias por simplificar mi proceso de toma de decisiones!",
-        imageUrl: "/profile6.png",
-    },
+    }
 ];

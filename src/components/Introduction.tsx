@@ -65,13 +65,27 @@ export default function Introduction() {
               Como desenvolvedor Full Stack, dedico-me a unir design e funcionalidade para criar experiências digitais impactantes e acessíveis.
             </p>
             <div className='flex items-center justify-center gap-3 md:justify-start md:gap-10'>
-                <Link href='/projects' className='px-3 text-white py-2 transition-all border-2 cursor-pointer text-md w-fit rounded-xl hover:shadow-xl hover:shadow-white/50'>
+                <Link href='/portfolio' className='px-3 text-white py-2 transition-all border-2 cursor-pointer text-md w-fit rounded-xl hover:shadow-xl hover:shadow-white/50'>
                   Ver Projetos
                 </Link>
                 
-                <Link href='/projects' className='px-3 text-accent py-2 transition-all border-2 border-accent cursor-pointer text-md w-fit rounded-xl hover:shadow-xl hover:shadow-white/50'>
-                 Fale comigo
+                <Link 
+                  href='https://wa.me/+5585989329627?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Podemos%20falar?' 
+                  className='px-3 text-accent py-2 transition-all border-2 border-accent cursor-pointer text-md w-fit rounded-xl hover:shadow-xl hover:shadow-white/50'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  ✨ Fale comigo
                 </Link>
+                <Link 
+                    href="/CV.pdf" 
+                    download="AlexanderHerrera_CV_EspecialistaTech2025.pdf"
+                    className="px-3 text-accent py-2 transition-all border-2 border-accent cursor-pointer text-md w-fit rounded-xl hover:shadow-xl hover:shadow-white/50"
+                    data-umami-event="cv-download" 
+                     target='_blank'
+                  >
+                    📌 Baixe meu CV 2025
+                  </Link>
             </div>
             
         </div>
