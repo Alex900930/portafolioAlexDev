@@ -1,6 +1,5 @@
 import { dataPortfolio } from "@/data";
 
-import CircleImage from "@/components/circle-image";
 import TransitionPage from "@/components/transition.page";
 import ContainerPage from "@/components/container";
 import PortfolioBox from "@/components/portafolio-box";
