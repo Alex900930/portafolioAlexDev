@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Introduction() {
   return (
-    <div className='z-20 w-full mt-[15rem] md:mt-44 flex items-center justify-center bg-primary/60 px-4 sm:px-6'>
+    <div className='z-20 w-full mt-[10rem] pt-4 md:mt-44 flex items-center justify-center bg-primary/60 px-4 sm:px-6'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl'>
         
         {/* Contenedor de Imagen - Reducido para móviles */}
