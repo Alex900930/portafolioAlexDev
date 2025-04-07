@@ -1,4 +1,4 @@
-import { BookText, CodeSquare, HomeIcon, UserRound, Linkedin, Instagram, Github, Twitch, Facebook, Crop, Pencil, Computer, Book, Rocket, Speech } from "lucide-react";
+import { BookText, CodeSquare, HomeIcon, UserRound, Linkedin, Instagram, Github, Facebook, Crop, Pencil, Computer, Book, Rocket, Speech } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 export const socialNetworks = [

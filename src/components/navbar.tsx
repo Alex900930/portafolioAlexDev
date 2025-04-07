@@ -1,6 +1,5 @@
 "use client"
 
-import { useState, useEffect } from "react"
 import {itemsNavbar} from '../data';
 import Link from "next/link";
 import { usePathname } from "next/navigation";
