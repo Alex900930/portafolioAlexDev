@@ -31,8 +31,8 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "Alexander H. Herrera Millet | Desarrollador Full Stack",
-  description: "Portafolio profesional de Alexander H. Herrera Millet, desarrollador Full Stack y diseñador UI/UX",
+  title: "Alexander H. Herrera Millet | Desenvolvedor Full Stack",
+  description: "Portfólio profissional de Alexander H. Herrera Millet, desenvolvedor Full Stack e designer UI/UX",
 }
 
 export default function RootLayout({
