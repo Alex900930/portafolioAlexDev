@@ -1,36 +1,44 @@
-import React from 'react'
-import MotionTranstion from './transition-component'
-import Link from 'next/link'
-import { socialNetworks } from '@/data'
+import React from 'react';
+import MotionTranstion from './transition-component';
+import Link from 'next/link';
+import { socialNetworks } from '@/data';
+import Image from 'next/image';
 
 export default function Header() {
   return (
-    <MotionTranstion position='bottom'
-    className='absolute z-40 inline-block w-full top-5 md:top-10 px-20'
+    <MotionTranstion 
+      position='bottom'
+      className='fixed z-40 w-full top-5 px-4 sm:px-6 md:px-8 lg:px-20'
     >
-        <header>
-           <div className='container text-white justify-between max-w-full mx-auto md:flex'>
-                <Link href='/'>
-                <h1 className='my-3 text-4xl font-bold text-center md:text-left'>
-                   Alex
-                    <span className='text-accent'>DevBrasil</span>
-                </h1>
-                   
-                </Link>
-                <div className='flex items-center justify-center gap-7'>
-                    {socialNetworks.map(({logo, src, id}) => (
-                        <Link key={id}
-                        href={src}
-                        target='_blank'
-                        className='transition-all duration-300 hover:text-accent'
-                        >
-                            {logo}
-                        </Link>
-                    ))}
-                </div>
-           </div>
-        </header>
-    
+      <header className='w-full'>
+        <div className='container mx-auto flex flex-col md:flex-row items-center justify-between gap-4'>
+          <Link href='/' className='flex justify-center md:justify-start'>
+            <Image
+              src="/Logo.png"
+              alt='Logo Alex'
+              width={200}
+              height={50}
+              className='w-auto h-24 md:h-36'
+              priority
+            />
+          </Link>
+          
+          <div className='flex items-center justify-center gap-4 sm:gap-5 md:gap-6 lg:gap-7'>
+            {socialNetworks.map(({logo, src, id}) => (
+              <Link 
+                key={id}
+                href={src}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-white hover:text-accent transition-colors duration-300 text-xl md:text-2xl'
+                aria-label={`Enlace a ${id}`}
+              >
+                {logo}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </header>
     </MotionTranstion>
-  )
+  );
 }
