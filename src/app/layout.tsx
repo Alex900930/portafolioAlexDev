@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     nosnippet: false,
     notranslate: false,
   },
-  viewport: 'width=device-width, initial-scale=1'
+  
 }
 
 export default function RootLayout({

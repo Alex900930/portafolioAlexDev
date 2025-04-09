@@ -13,7 +13,7 @@ const TestimonialsPage = () => {
     return (
         <>
             <TransitionPage />
-            <div className='flex flex-col justify-center h-lvh'>
+            <div className='flex flex-col justify-center mt-5 h-lvh'>
             <AvatarPortfolio />
             <h1 className="text-2xl leading-tight text-white text-center md:text-4xl md:mb-5 animate-fade-in">
                 Histórias reais
